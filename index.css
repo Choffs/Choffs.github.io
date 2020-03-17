@@ -1,0 +1,103 @@
+html, body
+{
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 720px)
+{
+  div.flexItem
+  {
+    flex: 1;
+    align-self: stretch;
+  }
+  div.flexRow
+  {
+    flex-direction: column
+  }
+  ul
+  {
+    font-size: 1.75em;
+  }
+  .angTech
+  {
+    font-size: .5em;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1080px)
+{
+  div.flexItem
+  {
+    flex: 1;
+    align-self: stretch;
+  }
+  div.flexRow
+  {
+    flex-direction: column
+  }
+  ul
+  {
+    font-size: 1.75em;
+  }
+  .angTech
+  {
+    font-size: .5em;
+  }
+}
+@media screen and (min-width: 1081px)
+{
+  div.flexItem
+  {
+    flex: 1;
+    align-self: stretch;
+  }
+  div.flexRow
+  {
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul
+  {
+    font-size: 1.75em;
+  }
+  .angTech
+  {
+    font-size: .5em;
+  }
+}
+.mainContainer
+{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.flexRow
+{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  min-height: 250px;
+}
+.flexItem
+{
+}
+.angTech
+{
+  padding-left: 5%;
+  text-align: center;
+}
+li span
+{
+  margin-right: 1.2%;
+}
+li
+{
+  list-style: none;
+}
+li strong {
+  border-bottom: 1px solid black;
+}
