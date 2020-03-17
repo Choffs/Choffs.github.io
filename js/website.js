@@ -14,7 +14,7 @@ var mainWebContainer = $('.web-wrapper-main');
     mainWebContainer.append(web_obj);
     web_obj.addClass('web-object');
     var site_btn = $(document.createElement('div'));
-    site_btn.addClass('site-btn');
+    site_btn.addClass('collapsed site-btn');
     web_obj.append(site_btn);
     site_btn.attr('data-toggle','collapse');
     site_btn.attr('data-target','#' + item.title);
