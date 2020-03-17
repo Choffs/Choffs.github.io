@@ -1,7 +1,11 @@
 var websites =
 [
   {
-    title: 'Test',
+    title: 'Restaurant',
+    url: 'https://stackblitz.com/edit/angular-fbuqwm?ctl=1&embed=1&file=src/app/modules/angular-material.module.ts&hideExplorer=1&hideNavigation=1&view=preview'
+  },
+  {
+    title: 'Test2',
     url: 'https://stackblitz.com/edit/angular-yudntd?ctl=1&embed=1&file=src/app/app.component.ts&hideExplorer=1&hideNavigation=1&view=preview'
   }
 ]
@@ -12,7 +16,8 @@ var mainWebContainer = $('.web-wrapper-main');
   websites.forEach((item, i) => {
     var web_obj = $(document.createElement('div'));
     mainWebContainer.append(web_obj);
-    web_obj.addClass('web-object');
+    web_obj.addClass('collapsed web-object');
+
     var site_btn = $(document.createElement('div'));
     site_btn.addClass('collapsed site-btn');
     web_obj.append(site_btn);
@@ -33,7 +38,26 @@ var mainWebContainer = $('.web-wrapper-main');
     var iFrame = $(document.createElement('iframe'));
     iFrame.attr('src',item.url);
     site_collapse.append(iFrame)
+    web_obj.on('click', function(event) {
+      if(site_collapse.hasClass('collapsing'))
+      {
+        return;
+      }
+      if(site_btn.hasClass('collapsed'))
+      {
+        web_obj.addClass('open');
+        web_obj.removeClass('collapsed');
+        console.log("Im Open For Business");
+      }
+      else {
+        {
+          web_obj.addClass('collapsed');
+          web_obj.removeClass('open');
+          console.log('Im Collapsed');
 
+        }
+      }
+    })
     console.log(item.title);
   });
 

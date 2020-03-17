@@ -4,7 +4,8 @@ html, body
 }
 div.web-wrapper-main
 {
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 div.web-object
@@ -13,6 +14,42 @@ div.web-object
   margin-top: 1.5%;
   margin-bottom: 1.5%;
   border-radius: 5px;
+  transition: width 1s;
+}
+div.web-object.collapsed
+{
+  margin-right: auto;
+  margin-left: auto;
+  width: 25%;
+}
+div.web-object.collapsed .site-btn
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  height: 15em;
+}
+div.web-object.collapsed .site-btn h1
+{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+div.web-object.collapsed .site-btn span{
+  margin-left: 1.5%;
+  font-size: 1.5em;
+}
+div.web-object.open .site-btn span
+{
+  float:right;
+  margin-right: 1.5%;
+}
+div.web-object.open
+{
+  min-width: 100%;
+  flex: 1;
 }
 div.site-btn
 {
@@ -20,17 +57,9 @@ div.site-btn
   user-select: none;
   cursor: pointer;
   background: #5c5c5ca4;
+  color: #ffffffb6;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-}
-div.site-btn h1 span
-{
-  float:right;
-}
-div.site-btn h1 span
-{
-  float:right;
-  margin-right: 1.5%;
 }
 div.site-collapsable
 {
@@ -39,7 +68,7 @@ div.site-collapsable
 div.site-btn span i
 {
   transform: rotate(0deg);
-  transition: transform .5s;
+  transition: transform .5s .75s;
 }
 div.site-btn.collapsed span i
 {
