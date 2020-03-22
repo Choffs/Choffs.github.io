@@ -2,6 +2,56 @@ html, body
 {
   height: 100%;
 }
+@media (hover:hover)
+{
+  div.site-btn.collapsed:hover span
+  {
+    transform: scale(5);
+  }
+}
+@media screen and (max-width: 768px)
+{
+  div.web-object
+  {
+    width: 100%;
+  }
+  div.web-object.collapsed
+  {
+  }
+  div.web-object.open
+  {
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1080px)
+{
+  div.web-object.collapsed
+  {
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+  }
+  div.web-object.open
+  {
+    min-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1081px)
+{
+  div.web-object.collapsed
+  {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+  }
+  div.web-object.open
+  {
+    min-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 div.web-wrapper-main
 {
   display: flex;
@@ -14,14 +64,9 @@ div.web-object
   margin-top: 1.5%;
   margin-bottom: 1.5%;
   border-radius: 5px;
-  transition: width 1s;
+  transition: width 1s, transform .5s, visibility .75s;
 }
-div.web-object.collapsed
-{
-  margin-right: auto;
-  margin-left: auto;
-  width: 25%;
-}
+
 div.web-object.collapsed .site-btn
 {
   display: flex;
@@ -46,11 +91,7 @@ div.web-object.open .site-btn span
   float:right;
   margin-right: 1.5%;
 }
-div.web-object.open
-{
-  min-width: 100%;
-  flex: 1;
-}
+
 div.site-btn
 {
   padding-left: 2%;
@@ -68,7 +109,7 @@ div.site-collapsable
 div.site-btn span i
 {
   transform: rotate(0deg);
-  transition: transform .5s .75s;
+  transition: transform .5s .5s;
 }
 div.site-btn.collapsed span i
 {
@@ -115,11 +156,19 @@ div.visit-button a:hover
   color: inherit;
   text-decoration:none;
 }
-div.preview-button
+.hidecollapse
 {
-  background: #fcb103;
+  opacity: .50;
+  transform: scale(0);
+  visibility:hidden;
+  animation-name: absolutePos;
+  animation-duration: .5s;
+  animation-delay: .25s;
+  animation-fill-mode:both;
+
 }
-.hidden
+@keyframes absolutePos
 {
-  display: none;
+  0% {position: static;}
+  100% {position: absolute;}
 }

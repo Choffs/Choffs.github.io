@@ -40,6 +40,55 @@
   }
 
 }
+@media (hover: hover)
+{
+  li#website:hover *
+  {
+    color:#00bf43;
+  }
+  li#cert:hover *
+  {
+    color: #00b5bf;
+  }
+  li.nav-item a
+  {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+  }
+  li.nav-item
+  {
+  }
+  li.nav-item i
+  {
+    transition: transform .5s;
+    transform: scale(2) translateY(10px);
+  }
+  li.nav-item:hover i
+  {
+    transform: scale(1.5) translateY(0px);
+  }
+  li.nav-item:hover a
+  {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+li#cert *
+{
+  color: #0ffaf2;
+}
+li#website *
+{
+  color: #0ffa7d;
+}
+li.nav-item
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 a.nav-link.active
 {
   color: white !important;
