@@ -149,7 +149,11 @@ div.logo-wrapper
   margin-left: auto;
   margin-right: auto;
 }
-
+ul
+{
+  padding: 0;
+  margin: 0;
+}
 div.about-me p#who-i-am-txt
 {
 transform: translateY(150%);
