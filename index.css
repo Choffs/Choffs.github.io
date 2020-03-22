@@ -5,6 +5,10 @@ html, body
 }
 @media screen and (max-width: 720px)
 {
+  div.about-me div.pic
+  {
+    display: none;
+  }
   div.flexItem
   {
     flex: 1;
@@ -26,6 +30,26 @@ html, body
   {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+@media screen and (min-width: 720px)
+{
+  div.about-me div.pic
+  {
+    transition: transform .5s !important;
+  }
+  div.about-me.centered div.pic
+  {
+    animation-name: centeredPic;
+    animation-delay: .5s;
+    animation-duration: .75s;
+    animation-fill-mode:both;
+    transform: translateX(50%) scaleX(0);
+  }
+  @keyframes centeredPic
+  {
+    from {position: static; }
+    to {position: absolute; }
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1080px)
@@ -52,6 +76,7 @@ html, body
     flex-direction: row;
     align-items: center;
   }
+
 }
 @media screen and (min-width: 1081px)
 {
@@ -89,6 +114,7 @@ html, body
     align-items: center;
   }
 }
+
 .mainContainer
 {
   display: flex;
@@ -105,6 +131,57 @@ html, body
   align-items:center;
   min-height: 250px;
 }
+div.about-me
+{
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+}
+div.pic
+{
+  flex: 2;
+  font-size: 6em;
+  display: flex;
+  align-items: center;
+}
+div.logo-wrapper
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.about-me p#who-i-am-txt
+{
+transform: translateY(150%);
+}
+div.about-me.centered p#who-i-am-txt
+{
+  transform: translateY(-100%);
+}
+div.about-me *
+{
+  transition: transform 1s;
+}
+div.about-me div.paragraph
+{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: darkgray;
+  color: white;
+  font-size: 3.5em;
+  overflow: hidden;
+}
+div.about-me p#about-me-txt
+{
+  transform: translateY(200%);
+}
+div.about-me.centered p#about-me-txt
+{
+    transform: translateY(-25%);
+}
+
 div.footer
 {
   width: 100%;
