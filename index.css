@@ -18,11 +18,11 @@ html, body
   {
     flex-direction: column
   }
-  ul
+  ul.tech-list
   {
     font-size: 1.75em;
   }
-  .angTech
+  .subTech
   {
     font-size: .5em;
   }
@@ -63,11 +63,11 @@ html, body
   {
     flex-direction: column
   }
-  ul
+  ul.tech-list
   {
     font-size: 1.75em;
   }
-  .angTech
+  .subTech
   {
     font-size: .5em;
   }
@@ -92,13 +92,13 @@ html, body
     margin-left: auto;
     margin-right: auto;
   }
-  ul
+  ul.tech-list
   {
-    font-size: 1.75em;
+    font-size: 3rem;
   }
-  .angTech
+  ul.subTech li
   {
-    font-size: .5em;
+    font-size: 1rem !important;
   }
   .tech-list
   {
@@ -200,7 +200,7 @@ div.footer li
 {
   cursor: pointer;
 }
-.angTech
+.subTech
 {
   padding-left: 5%;
   text-align: center;
@@ -215,4 +215,23 @@ li
 }
 li strong {
   border-bottom: 1px solid black;
+}
+ul.tech-list li
+{
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+}
+ul.tech-list li:nth-of-type(even)
+{
+
+  transform: translateX(100%);
+}
+ul.tech-list li:nth-of-type(odd)
+{
+  transform: translateX(-100%);
+}
+ul.tech-list li.centered
+{
+  opacity: 1;
+  transform: translateX(0%);
 }

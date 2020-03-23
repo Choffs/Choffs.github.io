@@ -17,12 +17,24 @@ IsElementInViewport = (elem,btestCenteredOnly=false,centerOffset=25)=>
 $(document).ready(function() {
 
 const about_me = $(document.querySelector('div.about-me'));
+const tech = $(document.querySelectorAll('ul.tech-list li'));
+var list_centered = false;
+console.log(tech);
 console.log(about_me);
 $(window).on('scroll',()=>
 {
-  if(IsElementInViewport(about_me,true,100))
+  if(IsElementInViewport(about_me,true,75))
   {
     about_me.addClass('centered');
   }else about_me.removeClass('centered');
+  tech.toArray().forEach((item, i) => {
+    item = $(item);
+  if(IsElementInViewport(item,true,25))
+    {
+      $(tech.get()[i]).addClass('centered');
+    }
+  list_centered = $(item).hasClass('centered');
+  });
+  console.log(list_centered);
 })
 });
