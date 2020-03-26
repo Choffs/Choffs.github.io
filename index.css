@@ -185,6 +185,18 @@ div.about-me.centered p#about-me-txt
 {
     transform: translateY(-25%);
 }
+div.flexItem.round
+{
+  box-shadow: 1px 1px 3px grey;
+}
+.round
+{
+  border-radius: 10px;
+}
+.dark
+{
+  background: darkgray;
+}
 
 div.footer
 {

@@ -9,7 +9,7 @@
   {
     width: 100%;
   }
-  nav.navbar a.nav-link
+  nav.navbar
   {
     font-size: 3rem;
   }
@@ -26,7 +26,7 @@
   {
     width: 100%;
   }
-  nav.navbar a.nav-link
+  nav.navbar
   {
     font-size: 1.75rem;
   }
@@ -46,27 +46,23 @@
   ul.navbar-nav
   {
     font-size: 1.75rem !important;
+    margin-left: auto;
+    margin-right: auto;
   }
+
 
 }
 @media (hover: hover) and (pointer: fine)
 {
-  li#website:hover *
-  {
-    color:#00bf43;
-  }
-  li#cert:hover *
-  {
-    color: #00b5bf;
-  }
   li.nav-item a
   {
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s;
   }
-  li.nav-item
+  li.nav-item:hover
   {
+    opacity: .75;
   }
   li.nav-item i
   {
@@ -91,6 +87,10 @@ li#cert *
 li#website *
 {
   color: #0ffa7d;
+}
+li#projects *
+{
+  color: #eb5534;
 }
 li.nav-item
 {
